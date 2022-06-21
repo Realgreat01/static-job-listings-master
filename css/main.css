@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+:root {
+  --DarkCyan: hsl(180, 29%, 50%);
+  --Grayish-Cyan: hsl(180, 52%, 96%);
+  --LightCyan: hsl(180, 31%, 95%);
+  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
+  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
+}
+
+header {
+  background: url("../images/bg-header-desktop.svg");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-color: #327171;
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background: #eef6f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+#details {
+  display: grid;
+  grid-template-columns: 1fr 3fr 6fr;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px auto;
+  width: 700px;
+  background: #fff;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px #7b8e8e;
+}
+
+#details #imageDiv {
+  margin-right: 5px;
+}
+
+#details #imageDiv img {
+  height: 50px;
+}
+
+#details #info {
+  display: flex;
+  flex-direction: column;
+}
+
+#details #info .company {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #5ba4a4;
+  justify-content: space-between;
+}
+
+#details #info .company .new, #details #info .company .featured {
+  height: 20px;
+  background: #5ba4a4;
+  border-radius: 10px;
+  color: white;
+  margin: 0 3px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#details #info .company .featured {
+  background: #2c2b2b;
+}
+
+#details #info > h2 {
+  font-size: 14px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#details #info > h2:hover {
+  color: #41b45e;
+}
+
+#details #info #data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0.8;
+}
+
+#details #info #data p {
+  margin: 0 2px;
+  font-size: 10px;
+}
+
+#details #info #data .dots {
+  height: 3px;
+  width: 3px;
+  background: black;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+#details #skills {
+  display: flex;
+  justify-self: right;
+}
+
+#details #skills p {
+  margin: 3px;
+  background: #eef6f6;
+  padding: 10px;
+  border-radius: 5px;
+  height: 30px;
+  color: #5ba4a4;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#details #skills p:hover {
+  color: #fff;
+  background: #41b45e;
+}
+
+#search-box {
+  background: #eef6f6;
+  height: 50px;
+  margin-top: -20px;
+  position: relative;
+}
+
+#search {
+  width: 700px;
+  box-shadow: 1px 1px 1px #7b8e8e;
+  background: #fff;
+  position: relative;
+  top: -20px;
+  z-index: 10;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+#search div {
+  width: 90%;
+  border-radius: 5px;
+  background: #fff;
+  height: 40px;
+}
+
+#search p:hover {
+  color: #09f6f6;
+  text-decoration: underline;
+}
