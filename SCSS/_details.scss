@@ -58,7 +58,7 @@ main{
                     background: hsl(180, 29%, 50%);
                     border-radius: 10px;
                     color:white;
-                    margin: 0 3px;
+                    margin: 3px;
                     display: flex;
                     align-items: center;
                     padding: 10px;
@@ -107,23 +107,27 @@ main{
     #skills{
         display: flex;
         justify-self:right;
-        p{
+        #skilled{
+            display:flex;
+        }
+        #skill{
             margin: 3px;
             background: hsl(180, 31%, 95%);
-            padding: 10px;
             border-radius: 5px;
-            height: 30px;
+            height: fit-content;
             color: hsl(180, 29%, 50%);
             display:flex;
             align-items: center;
             font-weight:700;
             font-size:14px;
             cursor: pointer;
-
             &:hover{
                 color:#fff;
                 background:hsl(135, 47%, 48%);
             }
+        }
+        .skill{
+            color:red;
         }
     }
 }

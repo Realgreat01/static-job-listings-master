@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
-:root {
-  --DarkCyan: hsl(180, 29%, 50%);
-  --Grayish-Cyan: hsl(180, 52%, 96%);
-  --LightCyan: hsl(180, 31%, 95%);
-  --Dark-Grayish-Cyan: hsl(180, 8%, 52%);
-  --Very-Dark-Grayish-Cyan: hsl(180, 14%, 20%);
-}
-
 header {
   background: url("../images/bg-header-desktop.svg");
   background-repeat: repeat;
@@ -70,7 +62,7 @@ main {
   background: #5ba4a4;
   border-radius: 10px;
   color: white;
-  margin: 0 3px;
+  margin: 3px;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -118,12 +110,15 @@ main {
   justify-self: right;
 }
 
-#details #skills p {
+#details #skills #skilled {
+  display: flex;
+}
+
+#details #skills #skill {
   margin: 3px;
   background: #eef6f6;
-  padding: 10px;
   border-radius: 5px;
-  height: 30px;
+  height: fit-content;
   color: #5ba4a4;
   display: flex;
   align-items: center;
@@ -132,9 +127,13 @@ main {
   cursor: pointer;
 }
 
-#details #skills p:hover {
+#details #skills #skill:hover {
   color: #fff;
   background: #41b45e;
+}
+
+#details #skills .skill {
+  color: red;
 }
 
 #search-box {
