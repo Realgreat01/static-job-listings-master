@@ -7,26 +7,35 @@ const jobs = async () =>{
 
 
 data.forEach(item=>{
-  const sum =  (arr) =>{
+  const tools =  (arr) =>{
     const p = document.createElement("p");
-
     if(arr.length>0){
-      for(let i = arr.length; i > 0 ; i--){
-        arr.forEach(element => {
-                  p.textContent += `<span style="margin: 5px; padding:10px" class="job-skill" id="skill">${element}</span>`
-                });
-
-        const final = `<span  id="skilled" >${p.textContent} </span>`
+        for(let i = arr.length; i > 0 ; i--){
+            arr.forEach(element => { p.textContent += `<span style="margin: 5px; padding:10px" class="job-skill" id="skill" onclick="filter(this)">${element}</span>` });
+            const final = `<span  id="skilled" class="tools">${p.textContent} </span>`
         return final
     }
   }else{
     return `
-    <p style="display:none ">None skill</p>`
+    <p style="display:none" class="tools">No tools</p>`
   }
 }
-    
+  const languages =  (arr) =>{
+    const p = document.createElement("p");
+    if(arr.length>0){
+        for(let i = arr.length; i > 0 ; i--){
+            arr.forEach(element => { p.textContent += `<span style="margin: 5px; padding:10px" class="job-skill" id="skill" onclick="filter(this)">${element}</span>` });
+            const final = `<span  id="skilled" class="languages">${p.textContent} </span>`
+        return final
+    }
+  }else{
+    return `
+    <p style="display:none" class="languages">No Lang</p>`
+  }
+}
+
     main.innerHTML += `     
-    <div id="details">
+    <div class="details">
       
 
     <div id="imageDiv">
@@ -50,15 +59,21 @@ data.forEach(item=>{
   </div>
 
   <div id="skills">
-  <p id="skill" style= "padding: 10px">${item.role}</p> 
-  <p id="skill" style= "padding: 10px">${item.level}</p> 
-  <p>${sum(item.tools)}</> 
-  <p>${sum(item.languages)}</p> 
+  <p id="skill" class="role"style= "padding: 10px" onclick="filter(this)">${item.role}</p> 
+  <p id="skill" class="level"style= "padding: 10px" onclick="filter(this)">${item.level}</p> 
+  <p>${tools(item.tools)}</> 
+  <p>${languages(item.languages)}</p> 
   </div>
   
 </div>
 `
+
  })
+ const details = document.querySelectorAll(".details");
+    details[0].style.borderLeft="5px solid hsl(180, 29%, 50%)";
+    details[1].style.borderLeft="5px solid hsl(180, 29%, 50%)";
+
+
 }
 
 jobs()

@@ -15,7 +15,43 @@ main{
     flex-direction: column;
     background: hsl(180, 31%, 95%);
 }
-
+#search-field{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-flex{
+    display:flex;
+    width: fit-content;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    background: hsl(180, 31%, 95%);
+    margin: 5px;
+}
+.search-images{
+    background:hsl(180, 29%, 50%);
+    height: inherit;
+    width: 25px;
+    padding: 5px;
+    align-items: center;
+    margin:0 auto;
+    &:hover{
+        background: #000;
+    }
+}
+.search-item{
+        margin: 10px;
+        height: 20px;
+        color: hsl(180, 29%, 50%);
+        display:flex;
+        align-items: center;
+        width:fit-content;
+        font-weight:700;
+        font-size:14px;
+        cursor: pointer;
+        
+}
 
 *{
     box-sizing: border-box;
@@ -24,7 +60,7 @@ main{
     font-family: 'League Spartan', sans-serif;
 }
 
-#details{
+.details{
     display: grid;
     grid-template-columns: 1fr 3fr 6fr;
     align-items: center;
@@ -34,7 +70,7 @@ main{
     background: #fff;
     height: 100px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 2px;
     box-shadow: 1px 1px 1px hsl(180, 8%, 52%);
 
     #imageDiv{
@@ -78,7 +114,7 @@ main{
                 cursor: pointer;
 
                 &:hover{
-                    color:hsl(135, 47%, 48%);
+                    color:hsl(180, 29%, 50%);
                 }
             }
 
@@ -123,17 +159,18 @@ main{
             cursor: pointer;
             &:hover{
                 color:#fff;
-                background:hsl(135, 47%, 48%);
+                background:hsl(180, 29%, 50%);
+                ;
             }
         }
-        .skill{
-            color:red;
+        #V{
+            color:#fff;
         }
     }
 }
 #search-box{
     background: hsl(180, 31%, 95%);
-    height: 50px;
+    min-height: 50px;
     margin-top: -20px;
     position: relative;
 }
@@ -144,7 +181,8 @@ main{
     position: relative;
     top: -20px;
     z-index: 10;
-    height: 40px;
+    min-height: 40px;
+    padding: 10px;
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -155,12 +193,14 @@ main{
         width: 90%;
         border-radius: 5px;
         background: #fff;
-        height: 40px;
+        min-height: 40px;
     }
-    p{
+    #clear{
+        font-weight: 700;
+        padding: 0 4px;
         &:hover{
-            color: hsl(180, 93%, 50%);
-            text-decoration: underline;
+            color: hsl(180, 29%, 50%);
+            border-bottom: 2px solid hsl(180, 29%, 50%);;
         }
     }
 }
