@@ -2,18 +2,19 @@
 
 header{
     background: url("../images/bg-header-desktop.svg");
-    background-repeat:repeat;
-    background-size: 100%;
-    background-color: hsl(180, 39%, 32%);
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-color: hsl(180, 29%, 50%);
     width:100%;
     height:150px;
     margin:0 auto;
-
+}
+body{
+    background: hsl(180, 31%, 95%);
 }
 main{
     display:flex;
     flex-direction: column;
-    background: hsl(180, 31%, 95%);
 }
 #search-field{
     display:flex;
@@ -68,8 +69,8 @@ main{
     margin: 10px auto;
     width: 700px;
     background: #fff;
-    height: 100px;
-    padding: 20px;
+    height: 120px;
+    padding: 20px 20px;
     border-radius: 2px;
     box-shadow: 1px 1px 1px hsl(180, 8%, 52%);
 
@@ -143,6 +144,7 @@ main{
     #skills{
         display: flex;
         justify-self:right;
+        flex-wrap: wrap;
         #skilled{
             display:flex;
         }
@@ -153,6 +155,7 @@ main{
             height: fit-content;
             color: hsl(180, 29%, 50%);
             display:flex;
+            flex-wrap: wrap;
             align-items: center;
             font-weight:700;
             font-size:14px;
@@ -162,9 +165,6 @@ main{
                 background:hsl(180, 29%, 50%);
                 ;
             }
-        }
-        #V{
-            color:#fff;
         }
     }
 }

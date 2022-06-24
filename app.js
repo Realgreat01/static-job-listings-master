@@ -17,7 +17,7 @@ data.forEach(item=>{
     }
   }else{
     return `
-    <p style="display:none" class="tools">No tools</p>`
+    <p style="display:none" class="tools"></p>`
   }
 }
   const languages =  (arr) =>{
@@ -30,7 +30,7 @@ data.forEach(item=>{
     }
   }else{
     return `
-    <p style="display:none" class="languages">No Lang</p>`
+    <p style="display:none">No Lang</p>`
   }
 }
 
@@ -61,8 +61,8 @@ data.forEach(item=>{
   <div id="skills">
   <p id="skill" class="role"style= "padding: 10px" onclick="filter(this)">${item.role}</p> 
   <p id="skill" class="level"style= "padding: 10px" onclick="filter(this)">${item.level}</p> 
-  <p>${tools(item.tools)}</> 
-  <p>${languages(item.languages)}</p> 
+  <p  class="flex">${tools(item.tools)}</> 
+  <p  class="flex">${languages(item.languages)}</p> 
   </div>
   
 </div>

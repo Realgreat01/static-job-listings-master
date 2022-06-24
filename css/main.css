@@ -1,18 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
 header {
   background: url("../images/bg-header-desktop.svg");
-  background-repeat: repeat;
-  background-size: 100%;
-  background-color: #327171;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #5ba4a4;
   width: 100%;
   height: 150px;
   margin: 0 auto;
 }
 
+body {
+  background: #eef6f6;
+}
+
 main {
   display: flex;
   flex-direction: column;
-  background: #eef6f6;
 }
 
 #search-field {
@@ -71,8 +74,8 @@ main {
   margin: 10px auto;
   width: 700px;
   background: #fff;
-  height: 100px;
-  padding: 20px;
+  height: 120px;
+  padding: 20px 20px;
   border-radius: 2px;
   box-shadow: 1px 1px 1px #7b8e8e;
 }
@@ -149,6 +152,7 @@ main {
 .details #skills {
   display: flex;
   justify-self: right;
+  flex-wrap: wrap;
 }
 
 .details #skills #skilled {
@@ -162,6 +166,7 @@ main {
   height: fit-content;
   color: #5ba4a4;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-weight: 700;
   font-size: 14px;
@@ -171,10 +176,6 @@ main {
 .details #skills #skill:hover {
   color: #fff;
   background: #5ba4a4;
-}
-
-.details #skills #V {
-  color: #fff;
 }
 
 #search-box {
@@ -215,4 +216,65 @@ main {
 #search #clear:hover {
   color: #5ba4a4;
   border-bottom: 2px solid #5ba4a4;
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    background-repeat: no-repeat;
+    background: url("../images/bg-header-mobile.svg");
+    background-size: 100%;
+    background-color: #5ba4a4;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+  }
+  #data {
+    justify-content: start;
+  }
+  #data p {
+    font-size: 16px;
+  }
+  .details {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 250px;
+    align-items: center;
+    width: 85vw;
+    justify-content: start;
+    align-items: start;
+    padding: 20px 0;
+    margin: 20px auto;
+    border-radius: 4px;
+  }
+  .details #info {
+    margin: 20px;
+    width: fit-content;
+  }
+  .details #imageDiv {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+  }
+  #skills {
+    border-top: 2px solid rgba(54, 53, 53, 0.308);
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  #skill {
+    flex-wrap: wrap;
+  }
+  .flex {
+    display: flex;
+    width: fit-content;
+    flex-wrap: wrap;
+  }
+  #search-box {
+    width: 90vw;
+    margin: 0 auto;
+  }
+  #search-box #search {
+    width: 90vw;
+  }
 }
