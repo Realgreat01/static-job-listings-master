@@ -20,6 +20,7 @@ function filter(job){
   };
 
 const removeItem=()=>{
+  filterJob();
   const remove = document.querySelectorAll(".search-flex");
   remove.forEach( (job, index)=> {
     job.addEventListener("click", ()=> {
@@ -34,7 +35,6 @@ const removeItem=()=>{
         }
       });
     })
-    filterJob();
   }
 
 

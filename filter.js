@@ -1,7 +1,18 @@
 
 let i;
 let searchArr = [];
+let searchBox = document.getElementById("search-box");
+
+const toggleBox = ()=>{
+    if (arr.length==0){
+        searchBox.style.display="none";
+    }else{
+        searchBox.style.display="block";
+    }
+}
+
 const filterJob = async () =>{
+    toggleBox();
     const response = await fetch ('./data.json');
     removeItem();
     const data = await response.json();

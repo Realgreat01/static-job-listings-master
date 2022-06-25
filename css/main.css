@@ -183,6 +183,7 @@ main {
   min-height: 50px;
   margin-top: -20px;
   position: relative;
+  display: none;
 }
 
 #search {
